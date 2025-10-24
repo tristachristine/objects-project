@@ -19,7 +19,11 @@ public class Main {
         // Prints atrributes of dog3
         System.out.println("Name: " + dog3 + ", Fur Color: " + dog3.furColor + ", Born: " + dog3.birthYear + ", Age: "
                 + dog3.age(currentYear));
+    }
 
+    // Bark function
+    public void bark() {
+        System.out.println(dog1.name + " says 'woof!'");
     }
 
 }
