@@ -28,12 +28,3 @@ public class Dog {
     };
 
 }
-
-public static void main(String[] args) {
-
-    // Creates new object: dog1
-    Dog dog1 = new Dog("Red", "Clifford", 1962);
-    // Prints atrributes of dog1
-    System.out.println("Name: " + dog1 + ", Fur Color: " + dog1.furColor + "Born: " + dog1.birthYear);
-
-}
