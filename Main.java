@@ -1,3 +1,7 @@
+// Created by trista.yaskus@malad.us
+// Created for Software and Programming Dev 1
+// Part two of Objects Project
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,11 +23,18 @@ public class Main {
         // Prints atrributes of dog3
         System.out.println("Name: " + dog3 + ", Fur Color: " + dog3.furColor + ", Born: " + dog3.birthYear + ", Age: "
                 + dog3.age(currentYear));
+
+        // Creates new object: gs1
+        GermanShepherd gs1 = new GermanShepherd("Black & Gray", "Rocky", 2006);
+        // Prints atrributes of gs1
+        System.out.println("Name: " + gs1 + ", Fur Color: " + gs1.furColor + ", Born: " + gs1.birthYear + ", Age: "
+                + gs1.age(currentYear));
+
     }
 
     // Bark function
     public void bark() {
         System.out.println(dog1.name + " says 'woof!'");
-    }
 
+    }
 }
