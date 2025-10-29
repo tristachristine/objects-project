@@ -27,4 +27,9 @@ public class Dog {
 
     };
 
+    // Bark function
+    public void bark() {
+        System.out.println(dogName + " says 'woof!'");
+
+    }
 }

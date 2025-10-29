@@ -2,7 +2,7 @@
 // Created for Software and Programming Dev 1
 // Part three of Objects Project
 
-public class Chihuahua {
+public class Chihuahua extends Dog {
 
     // Attributes of the object
     private String[] favoriteToy; // Array for holding toy preferences
