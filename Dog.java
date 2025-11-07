@@ -42,9 +42,10 @@ class Dog implements Comparable<Dog> {
         return this.furColor.compareTo(otherDog.furColor);
     }
 
-    class Comparison { // Separate class for Comparison
+    // Subclass for comparing the dogs
+    class Comparison {
         public static void main(String args[]) {
-            ArrayList<Dog> dogList = new ArrayList<Dog>(); // Use type argument
+            ArrayList<Dog> dogList = new ArrayList<Dog>();
             dogList.add(new Dog("Red", "Clifford", 1962));
             dogList.add(new Dog("White", "Bone", 2021));
             dogList.add(new Dog("Brown", "Berry", 2024));
@@ -52,10 +53,11 @@ class Dog implements Comparable<Dog> {
 
             Collections.sort(dogList);
 
-            Iterator<Dog> iterator = dogList.iterator(); // Use type argument for Iterator
+            Iterator<Dog> iterator = dogList.iterator();
             while (iterator.hasNext()) {
-                Dog dog = iterator.next(); // Corrected variable name
-                System.out.println("Color: " + dog.furColor + ", Age: " + dog.birthYear); // Access attributes directly
+                Dog dog = iterator.next();
+                System.out.println("Color: " + dog.furColor + ", Age: " + dog.birthYear); // Grabs and prints attributes
+                                                                                          // of the dog
             }
         }
     }
