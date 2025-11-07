@@ -2,7 +2,11 @@
 // Created for Software and Programming Dev 1
 // Part one of Objects Project
 
-public class Dog {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+class Dog implements Comparable<Dog> {
 
     // Attributes of the object
     String furColor;
@@ -31,5 +35,28 @@ public class Dog {
     public void bark() {
         System.out.println(dogName + " says 'woof!'");
 
+    }
+
+    @Override
+    public int compareTo(Dog otherDog) {
+        return this.furColor.compareTo(otherDog.furColor);
+    }
+
+    class Comparison { // Separate class for Comparison
+        public static void main(String args[]) {
+            ArrayList<Dog> dogList = new ArrayList<Dog>(); // Use type argument
+            dogList.add(new Dog("Red", "Clifford", 1962));
+            dogList.add(new Dog("White", "Bone", 2021));
+            dogList.add(new Dog("Brown", "Berry", 2024));
+            dogList.add(new Dog("Black & Gray", "Rocky", 2006));
+
+            Collections.sort(dogList);
+
+            Iterator<Dog> iterator = dogList.iterator(); // Use type argument for Iterator
+            while (iterator.hasNext()) {
+                Dog dog = iterator.next(); // Corrected variable name
+                System.out.println("Color: " + dog.furColor + ", Age: " + dog.birthYear); // Access attributes directly
+            }
+        }
     }
 }
